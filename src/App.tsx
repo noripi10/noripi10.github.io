@@ -1,4 +1,4 @@
-import { Box, Code, Divider, Flex, Heading, HStack, Text, useColorMode, VStack } from '@chakra-ui/react';
+import { Box, Code, Divider, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react';
 import { SidebarWithHeader } from './components/SidebarWithHeader';
 
 function App() {
