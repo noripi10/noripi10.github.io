@@ -51,8 +51,8 @@ export const SidebarWithHeader = () => {
         borderColor={useColorModeValue('gray.100', 'gray.700')}
       >
         <HStack display={'flex'} flex={1} px={8}>
-          <Heading flexGrow={1} textAlign={'center'} fontSize={'3xl'}>
-            MyPage
+          <Heading flexGrow={1} textAlign={'center'} fontSize={'2xl'} color='white'>
+            マイページ
           </Heading>
           <IconButton
             aria-label='Mode change'
@@ -154,7 +154,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       px={{ base: 4, md: 24 }}
       height='20'
       alignItems='center'
-      bg={useColorModeValue('white', 'gray.900')}
+      bgGradient='linear(to-r, blue.800, blue.500)'
       borderBottomWidth='1px'
       borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
       justifyContent='flex-start'
@@ -162,8 +162,8 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
     >
       <IconButton variant='outline' onClick={onOpen} aria-label='open menu' icon={<FiMenu />} />
 
-      <Text fontSize='2xl' ml='8' fontFamily='monospace' fontWeight='bold'>
-        My Page
+      <Text fontSize='2xl' ml='8' fontFamily='monospace' fontWeight='bold' color='white'>
+        マイページ
       </Text>
     </Flex>
   );
