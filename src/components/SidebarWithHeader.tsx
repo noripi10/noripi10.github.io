@@ -1,24 +1,25 @@
+import { ReactText } from 'react';
+
 import {
   Box,
+  BoxProps,
   CloseButton,
-  Flex,
-  Icon,
-  useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
-  Text,
-  useDisclosure,
-  BoxProps,
+  Flex,
   FlexProps,
+  IconButton,
   Heading,
-  useColorMode,
   HStack,
+  Icon,
+  Link,
+  Text,
+  useColorMode,
+  useColorModeValue,
+  useDisclosure,
 } from '@chakra-ui/react';
-import { IconButton } from '@chakra-ui/react';
-import { FiHome, FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 import { IconType } from 'react-icons';
-import { ReactText } from 'react';
+import { FiHome, FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 
 interface LinkItemProps {
   name: string;

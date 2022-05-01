@@ -1,6 +1,7 @@
 import { Box, Code, Divider, Flex, Grid, Heading, HStack, Image, Link, Stack, Text, VStack } from '@chakra-ui/react';
-import { SidebarWithHeader } from './components/SidebarWithHeader';
+
 import { AppStoreBadge } from './components/AppStoreBadge';
+import { SidebarWithHeader } from './components/SidebarWithHeader';
 
 function App() {
   return (
