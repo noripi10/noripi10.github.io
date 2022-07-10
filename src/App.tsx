@@ -1,4 +1,5 @@
 import { Box, Code, Divider, Flex, Grid, Heading, HStack, Image, Link, Stack, Text, VStack } from '@chakra-ui/react';
+import { FcGoogle } from 'react-icons/fc';
 
 import { AppStoreBadge } from './components/AppStoreBadge';
 import { SidebarWithHeader } from './components/SidebarWithHeader';
@@ -18,7 +19,7 @@ function App() {
           </HStack>
           <HStack alignItems={'center'} pb={2}>
             <Heading fontSize={16} width={'36'}>
-              移住地
+              居住
             </Heading>
             <Text>岐阜県</Text>
           </HStack>
@@ -26,11 +27,11 @@ function App() {
             <Heading fontSize={16} width={'36'}>
               趣味
             </Heading>
-            <Text>漫画・アニメ鑑賞</Text>
+            <Text>漫画・アニメ・プログラミング</Text>
           </HStack>
           <HStack alignItems={'center'} pb={2}>
             <Heading fontSize={16} width={'36'}>
-              休日の過ごし方
+              休日
             </Heading>
             <VStack justifyContent='flex-start' alignItems={'flex-start'}>
               <Text>子供と遊んだり、アプリ作成したりしています</Text>
@@ -161,6 +162,51 @@ function App() {
                   <Box display={'flex'}>
                     <Link href='https://apps.apple.com/jp/app/my-%E3%82%AF%E3%82%A4%E3%82%BA/id1598134285' isExternal>
                       <AppStoreBadge />
+                    </Link>
+                  </Box>
+                </Stack>
+
+                <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+                  <Text fontWeight={'bold'}>my-switchbot-controller</Text>
+                  <HStack alignItems={'flex-start'}>
+                    <Image
+                      boxSize={'80px'}
+                      borderRadius={'4'}
+                      src={
+                        'https://lh3.googleusercontent.com/CKhoZJcv-DmF0VBC_qlLINRiCIglljJyVmW4DoIZZ4yeuAMvv8_b4rahU08sytp4EekguWeL4kdjT_09tHW6GGnP=w128-h128-e365-rj-sc0x00ffffff'
+                      }
+                    />
+                    <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                      <Text fontSize={'0.8rem'}>Chrome 拡張機能</Text>
+                      <Text fontSize={'0.8rem'}>SwithBot端末電源をChromeから操作できます。</Text>
+                      <Text fontSize={'0.8rem'}>スマホアプリからいつも操作していた(起動するのが手間...)のですが、</Text>
+                      <Text fontSize={'0.8rem'}>自分は電源ON・OFFくらいしか普段使わないので、自作しました。</Text>
+                      <Text fontSize={'0.8rem'}>基本Chromeは起動しているのですごく操作が楽になりました。</Text>
+                    </VStack>
+                  </HStack>
+                  <Box
+                    display={'flex'}
+                    flexDir={'row'}
+                    width={'36'}
+                    height={'12'}
+                    borderRadius={'4'}
+                    borderWidth={'thin'}
+                    borderColor={'#ddd'}
+                    backgroundColor='#000'
+                    justifyContent={'flex-start'}
+                    alignItems={'center'}
+                    px={'2'}
+                  >
+                    <Link
+                      href='https://chrome.google.com/webstore/detail/my-switchbot-controler/ajhnghbfoleadocfplnfkfnkcbcamehl'
+                      isExternal
+                    >
+                      <HStack>
+                        <Box pr={'2'}>
+                          <FcGoogle size={32} />
+                        </Box>
+                        <Text fontSize={'12'}>Chrome WebStore</Text>
+                      </HStack>
                     </Link>
                   </Box>
                 </Stack>
