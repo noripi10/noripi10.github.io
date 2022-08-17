@@ -9,7 +9,7 @@ function App() {
     <Box minH={'100vh'}>
       <SidebarWithHeader />
 
-      <Box ml={{ base: 0, md: 60 }} p='4'>
+      <Box as={'main'} ml={{ base: 0, md: 60 }} p='4'>
         <Flex p={4} flexDir={'column'}>
           <HStack alignItems={'center'} pb={2}>
             <Heading fontSize={16} width={'36'}>
@@ -33,10 +33,14 @@ function App() {
             <Heading fontSize={16} width={'36'}>
               休日
             </Heading>
-            <VStack justifyContent='flex-start' alignItems={'flex-start'}>
-              <Text>子供と遊んだり、アプリ作成したりしています</Text>
-              <Text>ReactNativeが好きです</Text>
-            </VStack>
+            <Text>子供と遊んだり、アプリ作成したりしています</Text>
+          </HStack>
+
+          <HStack alignItems={'center'} pb={2}>
+            <Heading fontSize={16} width={'36'}>
+              その他
+            </Heading>
+            <Text>React Nativeでアプリ作ってます</Text>
           </HStack>
 
           <Divider my={4} />
@@ -71,6 +75,7 @@ function App() {
               <img alt='React' src='https://img.shields.io/badge/-ReactNative-555?style=flat&logo=react' />
               <img alt='Next.js' src='https://img.shields.io/badge/-Next.js-000?&style=flat&logo=next.js' />
               <img alt='Gatsby' src='https://img.shields.io/badge/-Gatsby-892099?&style=flat&logo=gatsby' />
+              <img alt='astro' src='https://img.shields.io/badge/-astro-F4EFED?&style=flat&logo=astro' />
               <img
                 alt='Firebase'
                 src='https://img.shields.io/badge/-Firebase-FFCA28?&style=flat&logo=firebase&logoColor=fff'

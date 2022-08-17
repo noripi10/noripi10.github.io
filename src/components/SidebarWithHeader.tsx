@@ -40,6 +40,7 @@ export const SidebarWithHeader = () => {
   return (
     <>
       <Flex
+        as={'header'}
         position={'sticky'}
         top={0}
         zIndex={10}
@@ -53,7 +54,7 @@ export const SidebarWithHeader = () => {
       >
         <HStack display={'flex'} flex={1} px={8}>
           <Heading flexGrow={1} textAlign={'center'} fontSize={'2xl'} color='white'>
-            マイページ
+            My Page
           </Heading>
           <IconButton
             aria-label='Mode change'
@@ -89,6 +90,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
+      as={'nav'}
       bg={useColorModeValue('white', 'gray.900')}
       borderRight='1px'
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
