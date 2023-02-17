@@ -54,7 +54,7 @@ export const SidebarWithHeader = () => {
       >
         <HStack display={'flex'} flex={1} px={8}>
           <Heading flexGrow={1} textAlign={'center'} fontSize={'2xl'} color='white'>
-            My Page
+            Noripi10
           </Heading>
           <IconButton
             aria-label='Mode change'

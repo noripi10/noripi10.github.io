@@ -1,7 +1,6 @@
 import { Box, Code, Divider, Flex, Grid, Heading, HStack, Image, Link, Stack, Text, VStack } from '@chakra-ui/react';
 import { FcGoogle } from 'react-icons/fc';
 
-import { AppStoreBadge } from './components/AppStoreBadge';
 import { SidebarWithHeader } from './components/SidebarWithHeader';
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
             <Heading fontSize={16} width={'36'}>
               名前
             </Heading>
-            <Text>noripi10 (のりぴ)</Text>
+            <Text>Hironori Sugiyama</Text>
           </HStack>
           <HStack alignItems={'center'} pb={2}>
             <Heading fontSize={16} width={'36'}>
@@ -35,7 +34,6 @@ function App() {
             </Heading>
             <Text>子供と遊んだり、アプリ作成したりしています</Text>
           </HStack>
-
           <HStack alignItems={'center'} pb={2}>
             <Heading fontSize={16} width={'36'}>
               その他
@@ -66,7 +64,7 @@ function App() {
             </VStack>
           </HStack>
 
-          <HStack alignItems={'flex-start'} pb={8}>
+          <HStack alignItems={'flex-start'} pb={2}>
             <Heading fontSize={16} width={'36'}>
               フレームワーク等
             </Heading>
@@ -87,9 +85,19 @@ function App() {
             </VStack>
           </HStack>
 
-          <Heading fontSize={16} width={'36'} my={'4'}>
+          <VStack alignItems={'flex-start'}>
+            <Text>バックエンドは、.NET(C#)を使うことが多いですが、Node.jsも得意です。</Text>
+            <Text>
+              dotnet-efとhotchocolate(GraphQL) or dotnet-aspnet-codegenerator(REST)の組み合わせで爆速開発できます。
+            </Text>
+            <Text>フロントエンドは、React(Vite Next.js)、ReactNative(Expo)を使うことが多いです。</Text>
+            <Text>社内でフロントできるのが自分だけなので結構大変です。地方は人材不足。。</Text>
+          </VStack>
+
+          <Heading fontSize={16} width={'36'} mt={'8'} mb={'2'}>
             アプリ一覧
           </Heading>
+          <Text my={2}>趣味レベルなので完成度あんまり高くないですが暇な時に作っています</Text>
           <HStack alignItems={'flex-start'} pb={8}>
             <VStack alignItems={'flex-start'}>
               <Grid gap={'2'}>
@@ -100,7 +108,7 @@ function App() {
                       boxSize={'80px'}
                       borderRadius={'4'}
                       src={
-                        'https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/0d/0b/56/0d0b56b4-4ba9-11e2-0f1d-32df9d17c603/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp'
+                        'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/62/1a/69/621a69f3-52df-7a1b-1c6d-4971b0abb8b5/AppIcon-1x_U007emarketing-0-7-0-85-220.png/217x0w.webp'
                       }
                     />
                     <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
@@ -109,12 +117,15 @@ function App() {
                       <Text fontSize={'0.8rem'}>Cloudへの保存は不安といった場合に使えます。</Text>
                     </VStack>
                   </HStack>
-                  <Box display={'flex'}>
+                  <Box display={'flex'} gap={4}>
                     <Link
                       href='https://apps.apple.com/jp/app/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B9/id1547004806'
                       isExternal
                     >
-                      <AppStoreBadge />
+                      <Image src={'/AppleStore.png'} width={150} height={45} />
+                    </Link>
+                    <Link href='https://play.google.com/store/apps/details?id=com.hiroapp.handwritten' isExternal>
+                      <Image src={'/GooglePlay.png'} w={0} width={150} height={45} />
                     </Link>
                   </Box>
                 </Stack>
@@ -141,7 +152,7 @@ function App() {
                       href='https://apps.apple.com/jp/app/%E3%82%A6%E3%82%A7%E3%82%B6%E3%83%AA%E3%82%B9/id1554740536'
                       isExternal
                     >
-                      <AppStoreBadge />
+                      <Image src={'/AppleStore.png'} width={150} height={45} />
                     </Link>
                   </Box>
                 </Stack>
@@ -166,7 +177,7 @@ function App() {
                   </HStack>
                   <Box display={'flex'}>
                     <Link href='https://apps.apple.com/jp/app/my-%E3%82%AF%E3%82%A4%E3%82%BA/id1598134285' isExternal>
-                      <AppStoreBadge />
+                      <Image src={'/AppleStore.png'} width={150} height={45} />
                     </Link>
                   </Box>
                 </Stack>
