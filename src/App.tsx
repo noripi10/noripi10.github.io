@@ -1,4 +1,17 @@
-import { Box, Code, Divider, Flex, Grid, Heading, HStack, Image, Link, Stack, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Code,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Image,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import { FcGoogle } from 'react-icons/fc';
 
 import { SidebarWithHeader } from './components/SidebarWithHeader';
@@ -98,137 +111,163 @@ function App() {
             アプリ一覧
           </Heading>
           <Text my={2}>趣味レベルなので完成度あんまり高くないですが暇な時に作っています</Text>
-          <HStack alignItems={'flex-start'} pb={8}>
-            <VStack alignItems={'flex-start'}>
-              <Grid gap={'2'}>
-                <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
-                  <Text fontWeight={'bold'}>メモリス</Text>
-                  <HStack alignItems={'flex-start'}>
-                    <Image
-                      boxSize={'80px'}
-                      borderRadius={'4'}
-                      src={
-                        'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/62/1a/69/621a69f3-52df-7a1b-1c6d-4971b0abb8b5/AppIcon-1x_U007emarketing-0-7-0-85-220.png/217x0w.webp'
-                      }
-                    />
-                    <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
-                      <Text fontSize={'0.8rem'}>手書きメモを簡単に作成できるメモアプリです</Text>
-                      <Text fontSize={'0.8rem'}>メモ保存は端末内のみです</Text>
-                      <Text fontSize={'0.8rem'}>Cloudへの保存は不安といった場合に使えます。</Text>
-                    </VStack>
-                  </HStack>
-                  <Box display={'flex'} gap={4}>
-                    <Link
-                      href='https://apps.apple.com/jp/app/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B9/id1547004806'
-                      isExternal
-                    >
-                      <Image src={'/AppleStore.png'} width={150} height={45} />
-                    </Link>
-                    <Link href='https://play.google.com/store/apps/details?id=com.hiroapp.handwritten' isExternal>
-                      <Image src={'/GooglePlay.png'} w={0} width={150} height={45} />
-                    </Link>
-                  </Box>
-                </Stack>
+          {/* <HStack alignItems={'flex-start'} margin={'auto'} pb={8} width={'full'}> */}
+          {/* <VStack alignItems={'flex-start'}> */}
 
-                <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
-                  <Text fontWeight={'bold'}>ウェザリス</Text>
-                  <HStack alignItems={'flex-start'}>
-                    <Image
-                      boxSize={'80px'}
-                      borderRadius={'4'}
-                      src={
-                        'https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/10/46/14/104614ea-fbcd-1b09-6de7-51ce2a8c769e/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp'
-                      }
-                    />
-                    <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
-                      <Text fontSize={'0.8rem'}>天気予報アプリです。</Text>
-                      <Text fontSize={'0.8rem'}>OpenWeatherMap APIを使用して天気予報を取得しています</Text>
-                      <Text fontSize={'0.8rem'}>FirebaseAuthentication</Text>
-                      <Text fontSize={'0.8rem'}>Firestoreを使用して各地点のリアルタイムチャットを実現</Text>
-                    </VStack>
-                  </HStack>
-                  <Box display={'flex'}>
-                    <Link
-                      href='https://apps.apple.com/jp/app/%E3%82%A6%E3%82%A7%E3%82%B6%E3%83%AA%E3%82%B9/id1554740536'
-                      isExternal
-                    >
-                      <Image src={'/AppleStore.png'} width={150} height={45} />
-                    </Link>
-                  </Box>
-                </Stack>
+          <SimpleGrid gap={'2'} maxW={'768px'}>
+            <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+              <Text fontWeight={'bold'}>メモリス</Text>
+              <HStack alignItems={'flex-start'}>
+                <Image
+                  boxSize={'80px'}
+                  borderRadius={'4'}
+                  src={
+                    'https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/62/1a/69/621a69f3-52df-7a1b-1c6d-4971b0abb8b5/AppIcon-1x_U007emarketing-0-7-0-85-220.png/217x0w.webp'
+                  }
+                />
+                <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                  <Text fontSize={'0.8rem'}>手書きメモを簡単に作成できるメモアプリです</Text>
+                  <Text fontSize={'0.8rem'}>メモ保存は端末内のみです</Text>
+                  <Text fontSize={'0.8rem'}>Cloudへの保存は不安といった場合に使えます。</Text>
+                </VStack>
+              </HStack>
+              <Box display={'flex'} gap={4}>
+                <Link href='https://apps.apple.com/jp/app/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%B9/id1547004806' isExternal>
+                  <Image src={'/AppleStore.png'} width={150} height={45} />
+                </Link>
+                <Link href='https://play.google.com/store/apps/details?id=com.hiroapp.handwritten' isExternal>
+                  <Image src={'/GooglePlay.png'} w={0} width={150} height={45} />
+                </Link>
+              </Box>
+            </Stack>
 
-                <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
-                  <Text fontWeight={'bold'}>my クイズ</Text>
-                  <HStack alignItems={'flex-start'}>
-                    <Image
-                      boxSize={'80px'}
-                      borderRadius={'4'}
-                      src={
-                        'https://is4-ssl.mzstatic.com/image/thumb/Purple126/v4/15/92/f6/1592f64b-3cb4-c3ab-2889-28d1e5d6ed26/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp'
-                      }
-                    />
-                    <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
-                      <Text fontSize={'0.8rem'}>自作クイズアプリです。</Text>
-                      <Text fontSize={'0.8rem'}>普通のクイズとは違い作成したクイズに声（ヴォイス）で回答します。</Text>
-                      <Text fontSize={'0.8rem'}>モチベーションは小さい子供は４択などからの回答は難しいので、</Text>
-                      <Text fontSize={'0.8rem'}>声を出してであれば回答することができると考え作成しました。</Text>
-                      <Text fontSize={'0.8rem'}>実際自分の子供は楽しんでくれています！！！</Text>
-                    </VStack>
-                  </HStack>
-                  <Box display={'flex'}>
-                    <Link href='https://apps.apple.com/jp/app/my-%E3%82%AF%E3%82%A4%E3%82%BA/id1598134285' isExternal>
-                      <Image src={'/AppleStore.png'} width={150} height={45} />
-                    </Link>
-                  </Box>
-                </Stack>
+            <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+              <Text fontWeight={'bold'}>ウェザリス</Text>
+              <HStack alignItems={'flex-start'}>
+                <Image
+                  boxSize={'80px'}
+                  borderRadius={'4'}
+                  src={
+                    'https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/10/46/14/104614ea-fbcd-1b09-6de7-51ce2a8c769e/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp'
+                  }
+                />
+                <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                  <Text fontSize={'0.8rem'}>天気予報アプリです。</Text>
+                  <Text fontSize={'0.8rem'}>OpenWeatherMap APIを使用して天気予報を取得しています</Text>
+                  <Text fontSize={'0.8rem'}>FirebaseAuthentication</Text>
+                  <Text fontSize={'0.8rem'}>Firestoreを使用して各地点のリアルタイムチャットを実現</Text>
+                </VStack>
+              </HStack>
+              <Box display={'flex'}>
+                <Link
+                  href='https://apps.apple.com/jp/app/%E3%82%A6%E3%82%A7%E3%82%B6%E3%83%AA%E3%82%B9/id1554740536'
+                  isExternal
+                >
+                  <Image src={'/AppleStore.png'} width={150} height={45} />
+                </Link>
+              </Box>
+            </Stack>
 
-                <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
-                  <Text fontWeight={'bold'}>my-switchbot-controller</Text>
-                  <HStack alignItems={'flex-start'}>
-                    <Image
-                      boxSize={'80px'}
-                      borderRadius={'4'}
-                      src={
-                        'https://lh3.googleusercontent.com/CKhoZJcv-DmF0VBC_qlLINRiCIglljJyVmW4DoIZZ4yeuAMvv8_b4rahU08sytp4EekguWeL4kdjT_09tHW6GGnP=w128-h128-e365-rj-sc0x00ffffff'
-                      }
-                    />
-                    <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
-                      <Text fontSize={'0.8rem'}>Chrome 拡張機能</Text>
-                      <Text fontSize={'0.8rem'}>SwithBot端末電源をChromeから操作できます。</Text>
-                      <Text fontSize={'0.8rem'}>スマホアプリからいつも操作していた(起動するのが手間...)のですが、</Text>
-                      <Text fontSize={'0.8rem'}>自分は電源ON・OFFくらいしか普段使わないので、自作しました。</Text>
-                      <Text fontSize={'0.8rem'}>基本Chromeは起動しているのですごく操作が楽になりました。</Text>
-                    </VStack>
+            <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+              <Text fontWeight={'bold'}>my クイズ</Text>
+              <HStack alignItems={'flex-start'}>
+                <Image
+                  boxSize={'80px'}
+                  borderRadius={'4'}
+                  src={
+                    'https://is4-ssl.mzstatic.com/image/thumb/Purple126/v4/15/92/f6/1592f64b-3cb4-c3ab-2889-28d1e5d6ed26/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp'
+                  }
+                />
+                <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                  <Text fontSize={'0.8rem'}>自作クイズアプリです。</Text>
+                  <Text fontSize={'0.8rem'}>普通のクイズとは違い作成したクイズに声（ヴォイス）で回答します。</Text>
+                  <Text fontSize={'0.8rem'}>モチベーションは小さい子供は４択などからの回答は難しいので、</Text>
+                  <Text fontSize={'0.8rem'}>声を出してであれば回答することができると考え作成しました。</Text>
+                  <Text fontSize={'0.8rem'}>実際自分の子供は楽しんでくれています！！！</Text>
+                </VStack>
+              </HStack>
+              <Box display={'flex'}>
+                <Link href='https://apps.apple.com/jp/app/my-%E3%82%AF%E3%82%A4%E3%82%BA/id1598134285' isExternal>
+                  <Image src={'/AppleStore.png'} width={150} height={45} />
+                </Link>
+              </Box>
+            </Stack>
+
+            <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+              <Text fontWeight={'bold'}>GeoTask</Text>
+              <HStack alignItems={'flex-start'}>
+                <Image
+                  boxSize={'80px'}
+                  borderRadius={'4'}
+                  src={
+                    'https://is5-ssl.mzstatic.com/image/thumb/Purple116/v4/71/e9/b1/71e9b138-0c21-cb74-a3f0-f21421d71196/AppIcon-1x_U007emarketing-0-7-0-85-220.png/217x0w.webp'
+                  }
+                />
+                <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                  <Text fontSize={'0.8rem'}>タスク管理アプリです。</Text>
+                  <Text fontSize={'0.8rem'}>ジオフェンシグによる位置情報とプッシュ通知連携を行っています。</Text>
+                  <Text fontSize={'0.8rem'}>写真を登録しておくとプッシュ通知にも表示できます。</Text>
+                  <Text fontSize={'0.8rem'}>外部サービス連携(RestAPI)もプッシュ通知時に連携できます。</Text>
+                  <Text fontSize={'0.8rem'}>Expo Routerを触りたくて使ってみました。</Text>
+                </VStack>
+              </HStack>
+              <Box display={'flex'}>
+                <Link
+                  href='https://apps.apple.com/us/app/geotask-%E3%82%B8%E3%82%AA%E3%82%BF%E3%82%B9%E3%82%AF/id6446362733'
+                  isExternal
+                >
+                  <Image src={'/AppleStore.png'} width={150} height={45} />
+                </Link>
+              </Box>
+            </Stack>
+
+            <Stack borderWidth={'0.5px'} borderRadius={'4'} padding={'4'}>
+              <Text fontWeight={'bold'}>my-switchbot-controller</Text>
+              <HStack alignItems={'flex-start'}>
+                <Image
+                  boxSize={'80px'}
+                  borderRadius={'4'}
+                  src={
+                    'https://lh3.googleusercontent.com/CKhoZJcv-DmF0VBC_qlLINRiCIglljJyVmW4DoIZZ4yeuAMvv8_b4rahU08sytp4EekguWeL4kdjT_09tHW6GGnP=w128-h128-e365-rj-sc0x00ffffff'
+                  }
+                />
+                <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
+                  <Text fontSize={'0.8rem'}>Chrome 拡張機能</Text>
+                  <Text fontSize={'0.8rem'}>SwithBot端末電源をChromeから操作できます。</Text>
+                  <Text fontSize={'0.8rem'}>スマホアプリからいつも操作していた(起動するのが手間...)のですが、</Text>
+                  <Text fontSize={'0.8rem'}>自分は電源ON・OFFくらいしか普段使わないので、自作しました。</Text>
+                  <Text fontSize={'0.8rem'}>基本Chromeは起動しているのですごく操作が楽になりました。</Text>
+                </VStack>
+              </HStack>
+              <Box
+                display={'flex'}
+                flexDir={'row'}
+                width={'36'}
+                height={'12'}
+                borderRadius={'4'}
+                borderWidth={'thin'}
+                borderColor={'#ddd'}
+                backgroundColor='#000'
+                justifyContent={'flex-start'}
+                alignItems={'center'}
+                px={'2'}
+              >
+                <Link
+                  href='https://chrome.google.com/webstore/detail/my-switchbot-controler/ajhnghbfoleadocfplnfkfnkcbcamehl'
+                  isExternal
+                >
+                  <HStack>
+                    <Box pr={'2'}>
+                      <FcGoogle size={32} />
+                    </Box>
+                    <Text fontSize={'12'}>Chrome WebStore</Text>
                   </HStack>
-                  <Box
-                    display={'flex'}
-                    flexDir={'row'}
-                    width={'36'}
-                    height={'12'}
-                    borderRadius={'4'}
-                    borderWidth={'thin'}
-                    borderColor={'#ddd'}
-                    backgroundColor='#000'
-                    justifyContent={'flex-start'}
-                    alignItems={'center'}
-                    px={'2'}
-                  >
-                    <Link
-                      href='https://chrome.google.com/webstore/detail/my-switchbot-controler/ajhnghbfoleadocfplnfkfnkcbcamehl'
-                      isExternal
-                    >
-                      <HStack>
-                        <Box pr={'2'}>
-                          <FcGoogle size={32} />
-                        </Box>
-                        <Text fontSize={'12'}>Chrome WebStore</Text>
-                      </HStack>
-                    </Link>
-                  </Box>
-                </Stack>
-              </Grid>
-            </VStack>
-          </HStack>
+                </Link>
+              </Box>
+            </Stack>
+          </SimpleGrid>
+          {/* </VStack> */}
+          {/* </HStack> */}
         </Flex>
       </Box>
     </Box>
